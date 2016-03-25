@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +17,51 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="selfie" translatesAutoresizingMaskIntoConstraints="NO" id="GKF-QM-VPb">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="400" height="600"/>
+                                </variation>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z1a-8M-j2D">
+                                <rect key="frame" x="45" y="512" width="206" height="45"/>
+                                <state key="normal" title="Take Photo Beeyotcch! 😝"/>
+                                <connections>
+                                    <action selector="onPhotoTaken:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zDb-dE-ht7"/>
+                                    <action selector="onTakePhotoPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zD4-l9-ufQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y7d-FZ-BW3">
+                                <rect key="frame" x="352" y="512" width="206" height="45"/>
+                                <state key="normal" title="Choose Photo 😎!"/>
+                                <connections>
+                                    <action selector="onChoosePhotoPresssed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LvW-qC-QeA"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="GKF-QM-VPb" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="R79-ne-laD"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="z1a-8M-j2D" secondAttribute="bottom" constant="43" id="RI3-j3-MYZ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="GKF-QM-VPb" secondAttribute="bottom" id="Rcw-Gl-Ao2"/>
+                            <constraint firstAttribute="trailing" secondItem="GKF-QM-VPb" secondAttribute="trailing" id="YFm-c1-sLy"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="y7d-FZ-BW3" secondAttribute="trailing" constant="22" id="Zt0-hF-OmS"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="y7d-FZ-BW3" secondAttribute="bottom" constant="43" id="cZ6-lI-tgh"/>
+                            <constraint firstItem="z1a-8M-j2D" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="24" id="gpy-r5-D5j"/>
+                            <constraint firstItem="GKF-QM-VPb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="q5W-Ah-u8w"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="GKF-QM-VPb" id="PeJ-a5-zM8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="304" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="selfie" width="960" height="1280"/>
+    </resources>
 </document>

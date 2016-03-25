@@ -13,6 +13,7 @@
 		5D32040C1C51614000C9DC01 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D32040A1C51614000C9DC01 /* Main.storyboard */; };
 		5D32040E1C51614000C9DC01 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D32040D1C51614000C9DC01 /* Assets.xcassets */; };
 		5D3204111C51614000C9DC01 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D32040F1C51614000C9DC01 /* LaunchScreen.storyboard */; };
+		5D32041A1C5161F500C9DC01 /* Sticker.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D3204191C5161F500C9DC01 /* Sticker.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		5D32040D1C51614000C9DC01 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5D3204101C51614000C9DC01 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5D3204121C51614000C9DC01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5D3204181C5161F500C9DC01 /* Sticker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sticker.h; sourceTree = "<group>"; };
+		5D3204191C5161F500C9DC01 /* Sticker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sticker.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,10 +61,10 @@
 		5D3204001C51614000C9DC01 /* SelfieStickers */ = {
 			isa = PBXGroup;
 			children = (
-				5D3204041C51614000C9DC01 /* AppDelegate.h */,
-				5D3204051C51614000C9DC01 /* AppDelegate.m */,
 				5D3204071C51614000C9DC01 /* ViewController.h */,
 				5D3204081C51614000C9DC01 /* ViewController.m */,
+				5D3204181C5161F500C9DC01 /* Sticker.h */,
+				5D3204191C5161F500C9DC01 /* Sticker.m */,
 				5D32040A1C51614000C9DC01 /* Main.storyboard */,
 				5D32040D1C51614000C9DC01 /* Assets.xcassets */,
 				5D32040F1C51614000C9DC01 /* LaunchScreen.storyboard */,
@@ -74,6 +77,8 @@
 		5D3204011C51614000C9DC01 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5D3204041C51614000C9DC01 /* AppDelegate.h */,
+				5D3204051C51614000C9DC01 /* AppDelegate.m */,
 				5D3204021C51614000C9DC01 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -150,6 +155,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D3204091C51614000C9DC01 /* ViewController.m in Sources */,
+				5D32041A1C5161F500C9DC01 /* Sticker.m in Sources */,
 				5D3204061C51614000C9DC01 /* AppDelegate.m in Sources */,
 				5D3204031C51614000C9DC01 /* main.m in Sources */,
 			);
